@@ -2,7 +2,10 @@
 trigger:
 - master
 pool:
-  name: 'ankit' # Replace with the name of your local agent pool
+  name: 'ankit'
+  demands:
+    - maven
+    - Agent.Version -gtVersion 2.199.0
 variables:
   MAVEN_HOME: 'C:\Users\ankitc\Downloads\apache-maven-3.9.7-bin\apache-maven-3.9.7' # Replace with your actual local Maven path
 
